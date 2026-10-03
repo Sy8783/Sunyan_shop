@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c3p0-config>
+    <!-- 默认配置 -->
+    <default-config>
+        <!-- 驱动类 -->
+        <property name="driverClass">com.mysql.jdbc.Driver</property>
+        <!-- 数据库连接URL -->
+        <property name="jdbcUrl">jdbc:mysql://localhost:3306/sunyan_shop?serverTimezone=GMT%2B8</property>
+        <!-- 用户名 -->
+        <property name="user">root</property>
+        <!-- 密码 -->
+        <property name="password">root</property>
+
+        <!-- 初始化连接数 -->
+        <property name="initialPoolSize">5</property>
+        <!-- 最大连接数 -->
+        <property name="maxPoolSize">15</property>
+        <!-- 最小空闲连接数 -->
+        <property name="minIdle">3</property>
+        <!-- 最大空闲连接数 -->
+        <property name="maxIdle">10</property>
+        <!-- 连接最大空闲时间（秒） -->
+        <property name="maxIdleTime">300</property>
+        <!-- 连接超时时间（秒） -->
+        <property name="checkoutTimeout">1000</property>
+        <!-- 自动提交事务 -->
+        <property name="autoCommitOnClose">false</property>
+        <!-- 获取连接失败重试次数 -->
+        <property name="acquireRetryAttempts">3</property>
+    </default-config>
+
+    <!-- 命名配置，可配置多个不同的连接池配置，通过名称来区分使用 -->
+    <named-config name="otherConfig">
+        <!-- 这里配置和上面类似，按需修改对应参数 -->
+        <property name="driverClass">com.mysql.jdbc.Driver</property>
+        <property name="jdbcUrl">jdbc:mysql://localhost:3306/sunyan_shop?serverTimezone=GMT%2B8</property>
+        <property name="user">root</property>
+        <property name="password">root</property>
+
+        <property name="initialPoolSize">3</property>
+        <property name="maxPoolSize">10</property>
+        <!-- 其他参数可按实际情况调整 -->
+    </named-config>
+</c3p0-config>

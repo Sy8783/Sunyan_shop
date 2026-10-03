@@ -1,0 +1,107 @@
+/* 整体页面背景设置 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* 商品详情容器，设置内边距、背景色、边框和阴影，使其更美观突出 */
+.product-detail-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
+    max-width: 1200px;
+}
+
+/* 商品标题样式，较大字体、加粗且居中显示 */
+.product-title {
+    text-align: center;
+    color: #333;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* 单个商品项的容器样式，设置合理的间距、边框和圆角，营造卡片式效果 */
+.product-item {
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* 商品图片样式，设置合适的宽度、高度以及图片显示效果 */
+.product-image {
+    width: 50%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* 商品简介样式，合理的字体大小和颜色，便于阅读 */
+.product-description {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* 商品价格样式，突出显示价格，颜色醒目 */
+.product-price {
+    color: #007bff;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* 加入购物车按钮样式，设置背景色、颜色、圆角等，悬停时有交互效果 */
+.add-to-cart-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 18px;
+}
+
+.add-to-cart-button:hover {
+    background-color: #0056b3;
+}
+
+/* 购物车图标容器，设置定位等样式，使其固定在右上角 */
+.cart-icon-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+/* 购物车图标样式 */
+.cart-icon {
+    width: 40px;
+    height: 40px;
+    fill: #007bff; /* 设置图标颜色 */
+}
+
+/* 购物车图标数量显示样式，用于显示添加商品的数量 */
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 50%;
+    font-size: 12px;
+    min-width: 18px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    display: none; /* 初始隐藏数量显示 */
+}
